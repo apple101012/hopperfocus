@@ -1,0 +1,349 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Gryffindor colors */
+  --gryffindor-primary: #740001;
+  --gryffindor-secondary: #D3A625;
+  
+  /* Slytherin colors */
+  --slytherin-primary: #1A472A;
+  --slytherin-secondary: #5D5D5D;
+  
+  /* Ravenclaw colors */
+  --ravenclaw-primary: #0E1A40;
+  --ravenclaw-secondary: #946B2D;
+  
+  /* Hufflepuff colors */
+  --hufflepuff-primary: #F0C75E;
+  --hufflepuff-secondary: #60460F;
+  --hufflepuff-text-dark: #D4A840;
+  
+  /* Default to Gryffindor */
+  --house-primary: var(--gryffindor-primary);
+  --house-secondary: var(--gryffindor-secondary);
+}
+
+/* Dark mode: Improve Hufflepuff text visibility */
+.theme-hufflepuff .text-house-secondary {
+  color: var(--hufflepuff-text-dark) !important;
+}
+
+.theme-hufflepuff .bg-house-secondary {
+  background: var(--hufflepuff-secondary) !important;
+}
+
+body {
+  @apply bg-black text-white font-sans;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* House theme classes */
+.theme-gryffindor {
+  --house-primary: var(--gryffindor-primary);
+  --house-secondary: var(--gryffindor-secondary);
+}
+
+.theme-slytherin {
+  --house-primary: var(--slytherin-primary);
+  --house-secondary: var(--slytherin-secondary);
+}
+
+.theme-ravenclaw {
+  --house-primary: var(--ravenclaw-primary);
+  --house-secondary: var(--ravenclaw-secondary);
+}
+
+.theme-hufflepuff {
+  --house-primary: var(--hufflepuff-primary);
+  --house-secondary: var(--hufflepuff-secondary);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-900;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--house-primary);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--house-secondary);
+}
+
+/* Spotlight effect for demo mode */
+.spotlight-dim {
+  position: relative;
+}
+
+.spotlight-dim::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 40;
+  pointer-events: none;
+}
+
+.spotlight-highlight {
+  position: relative;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+/* Confetti particles */
+.confetti-particle {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Wax seal effect */
+.wax-seal {
+  position: relative;
+  animation: wax-seal 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Light Mode Styles - Complete Rehaul for Maximum Readability */
+.light-mode {
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f0f0f0;
+  --bg-card: #ffffff;
+  --text-primary: #0a0a0a;
+  --text-secondary: #2a2a2a;
+  --text-tertiary: #4a4a4a;
+  --text-dim: #6a6a6a;
+  --border-primary: #d0d0d0;
+  --border-secondary: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+.light-mode body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Base backgrounds */
+.light-mode .bg-neutral-950,
+.light-mode .bg-black {
+  background: var(--bg-secondary) !important;
+  box-shadow: 0 1px 3px var(--shadow-color);
+}
+
+.light-mode .bg-neutral-900 {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-secondary);
+}
+
+.light-mode .bg-neutral-800 {
+  background: var(--bg-tertiary) !important;
+}
+
+.light-mode .bg-neutral-700 {
+  background: #e5e5e5 !important;
+}
+
+/* Text colors */
+.light-mode .text-white {
+  color: var(--text-primary) !important;
+}
+
+.light-mode .text-neutral-400,
+.light-mode .text-neutral-300 {
+  color: var(--text-secondary) !important;
+}
+
+.light-mode .text-neutral-500 {
+  color: var(--text-tertiary) !important;
+}
+
+.light-mode .text-neutral-600,
+.light-mode .text-neutral-700 {
+  color: var(--text-dim) !important;
+}
+
+/* Borders */
+.light-mode .border-neutral-800,
+.light-mode .border-neutral-700 {
+  border-color: var(--border-primary) !important;
+}
+
+.light-mode .border-neutral-900 {
+  border-color: var(--border-secondary) !important;
+}
+
+/* Form inputs */
+.light-mode input,
+.light-mode textarea,
+.light-mode select {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-primary) !important;
+}
+
+.light-mode input:focus,
+.light-mode textarea:focus {
+  border-color: var(--house-primary) !important;
+  box-shadow: 0 0 0 2px rgba(var(--house-primary-rgb), 0.1) !important;
+}
+
+.light-mode input::placeholder,
+.light-mode textarea::placeholder {
+  color: var(--text-dim) !important;
+  opacity: 0.7;
+}
+
+/* Buttons */
+.light-mode button:not(.bg-house-primary):not(.bg-house-secondary):not([class*="bg-red"]):not([class*="bg-green"]):not([class*="bg-blue"]):not([class*="bg-purple"]) {
+  color: var(--text-primary) !important;
+}
+
+.light-mode .bg-neutral-800:hover,
+.light-mode .bg-neutral-700:hover {
+  background: #d0d0d0 !important;
+}
+
+/* House theme adjustments for light mode */
+.light-mode.theme-hufflepuff .text-house-primary,
+.light-mode.theme-hufflepuff .bg-house-primary {
+  color: #8b6914 !important;
+}
+
+.light-mode.theme-hufflepuff .bg-house-primary {
+  background: #d4a127 !important;
+  color: white !important;
+}
+
+.light-mode.theme-slytherin .text-house-primary {
+  color: #0d3820 !important;
+}
+
+.light-mode.theme-slytherin .bg-house-primary {
+  background: #1a5c3a !important;
+}
+
+.light-mode.theme-slytherin .text-house-secondary {
+  color: #3a3a3a !important;
+}
+
+.light-mode.theme-ravenclaw .text-house-primary {
+  color: #0a1530 !important;
+}
+
+.light-mode.theme-ravenclaw .bg-house-primary {
+  background: #162a60 !important;
+}
+
+.light-mode.theme-gryffindor .text-house-primary {
+  color: #5a0001 !important;
+}
+
+.light-mode.theme-gryffindor .text-house-secondary {
+  color: #9d7a15 !important;
+}
+
+/* Ensure house-colored backgrounds always have white text */
+.light-mode .bg-house-primary,
+.light-mode .bg-house-secondary {
+  color: white !important;
+}
+
+.light-mode .bg-house-primary * {
+  color: white !important;
+}
+
+/* Scrollbar */
+.light-mode ::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+}
+
+.light-mode ::-webkit-scrollbar-thumb {
+  background: var(--border-primary);
+}
+
+.light-mode ::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dim);
+}
+
+/* Cards and sections */
+.light-mode .card {
+  background: var(--bg-card);
+  border-color: var(--border-secondary);
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+/* Gradient backgrounds need adjustment */
+.light-mode .bg-gradient-to-r {
+  opacity: 1;
+}
+
+/* Ensure colored text badges remain readable */
+.light-mode .text-red-400,
+.light-mode .text-red-500 {
+  color: #dc2626 !important;
+}
+
+.light-mode .text-green-400,
+.light-mode .text-green-500 {
+  color: #16a34a !important;
+}
+
+.light-mode .text-blue-400,
+.light-mode .text-blue-500 {
+  color: #2563eb !important;
+}
+
+.light-mode .text-purple-400,
+.light-mode .text-purple-500 {
+  color: #9333ea !important;
+}
+
+.light-mode .text-yellow-400,
+.light-mode .text-yellow-500 {
+  color: #ca8a04 !important;
+}
+
+.light-mode .text-orange-400 {
+  color: #ea580c !important;
+}
+
+/* Special UI elements */
+.light-mode .spotlight-dim::before {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* Task completion states */
+.light-mode .line-through {
+  opacity: 0.5;
+}
+
+/* Hover states */
+.light-mode .hover\\:bg-neutral-700:hover {
+  background: #d5d5d5 !important;
+}
+
+.light-mode .hover\\:bg-neutral-600:hover {
+  background: #c0c0c0 !important;
+}
+
+/* Navigation and sidebars */
+.light-mode nav,
+.light-mode aside {
+  background: var(--bg-secondary) !important;
+  border-color: var(--border-secondary) !important;
+}

@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+frontend/node_modules/
+
+# build output
+dist/
+frontend/dist/
+
+# Python
+__pycache__/
+*.pyc
+
+# env
+.env
+backend/.env
+
+# misc
+.DS_Store
