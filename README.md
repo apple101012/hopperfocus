@@ -1,4 +1,4 @@
-# ⏰ ChronoCharm: Beating Time Blindness for ADHD
+# ⏰ HopperFocus: Beating Time Blindness for ADHD
 
 **A gamified productivity system that makes time visible, immediate, and impossible to ignore.**
 
@@ -15,11 +15,11 @@ People with ADHD suffer from **time blindness**—an inability to accurately per
 
 ---
 
-## 🎯 The Solution: ChronoCharm's 3 Core Powers
+## 🎯 The Solution: HopperFocus's 3 Core Powers
 
 ### 1. ⏰ **The Time Turner Timeline** (Combats Time Blindness)
 
-Instead of a traditional 30-day calendar grid, ChronoCharm visualizes time as a **shrinking horizontal progress bar**.
+Instead of a traditional 30-day calendar grid, HopperFocus visualizes time as a **shrinking horizontal progress bar**.
 
 **How it works:**
 - You input the **Final Deadline** for your massive project
@@ -68,7 +68,7 @@ When you accept a contract, the app enters **full-screen immersive mode**.
 - Only 2 buttons exist: **"Task Complete"** and **"Forfeit"**
 
 **The Hackathon Flex:**  
-Traditional number countdowns don't work for ADHD. ChronoCharm uses **visceral visual feedback** (shrinking aura, color changes, falling particles) to make time passage **physically undeniable**.
+Traditional number countdowns don't work for ADHD. HopperFocus uses **visceral visual feedback** (shrinking aura, color changes, falling particles) to make time passage **physically undeniable**.
 
 ---
 
@@ -78,9 +78,9 @@ Traditional number countdowns don't work for ADHD. ChronoCharm uses **visceral v
 - No immediate consequences → brain doesn't prioritize
 - Future rewards feel abstract → temporal discounting wins
 
-**Why ChronoCharm works:**
+**Why HopperFocus works:**
 1. **Loss Aversion:** Humans fear losing what they already have more than they desire gains. Staking Mana triggers this primitive survival instinct.
-2. **Immediate Consequences:** Unlike real deadlines (days away), ChronoCharm's 5-15 minute timers create **instant accountability**.
+2. **Immediate Consequences:** Unlike real deadlines (days away), HopperFocus's 5-15 minute timers create **instant accountability**.
 3. **Visual Time Perception:** The shrinking timeline and visual timers bypass time blindness by making abstract time **spatially concrete**.
 
 ---
@@ -102,7 +102,7 @@ Traditional number countdowns don't work for ADHD. ChronoCharm uses **visceral v
 
 ---
 
-## 🎮 How to Use ChronoCharm
+## 🎮 How to Use HopperFocus
 
 ### Step 1: Set Your Final Deadline
 ```
@@ -213,7 +213,7 @@ python chronocharm/backend/test_gemini_direct.py
 
 ## 🎯 Addressing Time Blindness: Before & After
 
-### Before ChronoCharm (Standard To-Do List)
+### Before HopperFocus (Standard To-Do List)
 ```
 ❌ "Write 10-page paper" - due in 2 weeks
    └─ Feels abstract, no urgency
@@ -225,7 +225,7 @@ python chronocharm/backend/test_gemini_direct.py
 ❌ Time passage is invisible
 ```
 
-### After ChronoCharm (Time Turner + Contracts)
+### After HopperFocus (Time Turner + Contracts)
 ```
 ✅ Visual timeline shows 14 days → shrinking to 13, 12, 11...
    └─ Time is now SPATIAL and SHRINKING
@@ -248,19 +248,19 @@ python chronocharm/backend/test_gemini_direct.py
 
 ## 💡 Hackathon Innovation
 
-### What Makes ChronoCharm Different?
+### What Makes HopperFocus Different?
 
 **NOT another Pomodoro app:**
 - Pomodoro = generic 25-minute timer (no stakes, no customization)
-- ChronoCharm = customizable contracts with real loss aversion
+- HopperFocus = customizable contracts with real loss aversion
 
 **NOT another AI task planner:**
 - Generic planners = AI dictates, you obey
-- ChronoCharm = AI suggests, **you customize** stakes/timers/dates
+- HopperFocus = AI suggests, **you customize** stakes/timers/dates
 
 **NOT another calendar app:**
 - Calendars = static 30-day grids (abstract boxes)
-- ChronoCharm = dynamic shrinking timeline (visual urgency)
+- HopperFocus = dynamic shrinking timeline (visual urgency)
 
 **The Unique Combination:**
 1. AI-powered breakdown (scalable)
@@ -303,7 +303,7 @@ python chronocharm/backend/test_gemini_direct.py
 
 ## 🤝 Contributing
 
-ChronoCharm is built for the ADHD community. Contributions welcome!
+HopperFocus is built for the ADHD community. Contributions welcome!
 
 **Areas to improve:**
 - UI/UX refinements for visual timers
