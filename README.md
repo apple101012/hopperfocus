@@ -167,7 +167,7 @@ Traditional number countdowns don't work for ADHD. HopperFocus uses **visceral v
 
 ### Backend Setup
 ```bash
-cd chronocharm/backend
+cd hopperfocus/backend
 pip install -r requirements.txt
 
 # Create .env file
@@ -182,7 +182,7 @@ Backend runs on: `http://127.0.0.1:8004`
 
 ### Frontend Setup
 ```bash
-cd chronocharm/frontend
+cd hopperfocus/frontend
 npm install
 npm run dev
 ```
@@ -195,13 +195,13 @@ Frontend runs on: `http://localhost:5175`
 
 ```bash
 # Comprehensive backend tests (10 tests)
-python chronocharm/backend/comprehensive_test.py
+python hopperfocus/backend/comprehensive_test.py
 
 # End-to-end integration test
-python chronocharm/backend/test_e2e.py
+python hopperfocus/backend/test_e2e.py
 
 # AI-only test
-python chronocharm/backend/test_gemini_direct.py
+python hopperfocus/backend/test_gemini_direct.py
 ```
 
 **Expected Results:**
